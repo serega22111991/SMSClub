@@ -1,0 +1,469 @@
+2018-07-20 02:40:46 [127.0.0.1][-][ocnpsm40fd6n3igpn4vej5oug7lauh5j][error][Error] Error: Class 'app\models\UserIdentity' not found in C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\User.php:690
+Stack trace:
+#0 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\User.php(192): yii\web\User->renewAuthStatus()
+#1 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\User.php(360): yii\web\User->getIdentity()
+#2 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Component.php(139): yii\web\User->getIsGuest()
+#3 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2-debug\panels\UserPanel.php(81): yii\base\Component->__get('isGuest')
+#4 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#5 [internal function]: yii\base\BaseObject->__construct(Array)
+#6 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#7 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#8 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#9 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2-debug\Module.php(177): yii\BaseYii::createObject(Array)
+#10 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2-debug\Module.php(149): yii\debug\Module->initPanels()
+#11 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\Module->init()
+#12 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Module.php(158): yii\base\BaseObject->__construct(Array)
+#13 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#14 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#15 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#16 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#17 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#18 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Application.php(315): yii\base\Module->getModule('debug')
+#19 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#20 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Application.php(273): yii\web\Application->bootstrap()
+#21 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#22 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Application.php(206): yii\base\BaseObject->__construct(Array)
+#23 C:\OSPanel\domains\smsclub\web\index.php(14): yii\base\Application->__construct(Array)
+#24 {main}
+2018-07-20 02:40:46 [127.0.0.1][-][ocnpsm40fd6n3igpn4vej5oug7lauh5j][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ocnpsm40fd6n3igpn4vej5oug7lauh5j'
+    '_csrf' => 'dbd752784fdd25be52a1a6d8ae767dce5f225aa62f1f42258ec753cc9094e7fda:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Wn-xAr5UHWC5ZF_4eQ2u7N1-00gf1Xz3\";}'
+    '_identity' => '6ad07e83edc53e15401ebd32b9343cdf339568a57d78b090d060400104183d91a:2:{i:0;s:9:\"_identity\";i:1;s:13:\"[1,0,1209600]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__captcha/site/captcha' => 'cekipor'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'smsclub'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smsclub/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => 'PHPSESSID=ocnpsm40fd6n3igpn4vej5oug7lauh5j; _csrf=dbd752784fdd25be52a1a6d8ae767dce5f225aa62f1f42258ec753cc9094e7fda%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Wn-xAr5UHWC5ZF_4eQ2u7N1-00gf1Xz3%22%3B%7D; _identity=6ad07e83edc53e15401ebd32b9343cdf339568a57d78b090d060400104183d91a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A13%3A%22%5B1%2C0%2C1209600%5D%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.1-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.1-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.1-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.1-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'smsclub'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/smsclub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/smsclub'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/smsclub/web/index.php'
+    'REMOTE_PORT' => '10201'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1532043645.998
+    'REQUEST_TIME' => 1532043645
+    'argv' => [
+        0 => 'r=site%2Findex'
+    ]
+    'argc' => 1
+]
+2018-07-20 02:42:03 [127.0.0.1][-][ocnpsm40fd6n3igpn4vej5oug7lauh5j][error][Error] Error: Class 'app\models\UserIdentity' not found in C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\User.php:690
+Stack trace:
+#0 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\User.php(192): yii\web\User->renewAuthStatus()
+#1 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\User.php(360): yii\web\User->getIdentity()
+#2 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Component.php(139): yii\web\User->getIsGuest()
+#3 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2-debug\panels\UserPanel.php(81): yii\base\Component->__get('isGuest')
+#4 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#5 [internal function]: yii\base\BaseObject->__construct(Array)
+#6 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#7 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#8 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#9 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2-debug\Module.php(177): yii\BaseYii::createObject(Array)
+#10 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2-debug\Module.php(149): yii\debug\Module->initPanels()
+#11 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\Module->init()
+#12 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Module.php(158): yii\base\BaseObject->__construct(Array)
+#13 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#14 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#15 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#16 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#17 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#18 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Application.php(315): yii\base\Module->getModule('debug')
+#19 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#20 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Application.php(273): yii\web\Application->bootstrap()
+#21 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#22 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Application.php(206): yii\base\BaseObject->__construct(Array)
+#23 C:\OSPanel\domains\smsclub\web\index.php(14): yii\base\Application->__construct(Array)
+#24 {main}
+2018-07-20 02:42:03 [127.0.0.1][-][ocnpsm40fd6n3igpn4vej5oug7lauh5j][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ocnpsm40fd6n3igpn4vej5oug7lauh5j'
+    '_csrf' => 'dbd752784fdd25be52a1a6d8ae767dce5f225aa62f1f42258ec753cc9094e7fda:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Wn-xAr5UHWC5ZF_4eQ2u7N1-00gf1Xz3\";}'
+    '_identity' => '6ad07e83edc53e15401ebd32b9343cdf339568a57d78b090d060400104183d91a:2:{i:0;s:9:\"_identity\";i:1;s:13:\"[1,0,1209600]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__captcha/site/captcha' => 'cekipor'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'smsclub'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smsclub/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => 'PHPSESSID=ocnpsm40fd6n3igpn4vej5oug7lauh5j; _csrf=dbd752784fdd25be52a1a6d8ae767dce5f225aa62f1f42258ec753cc9094e7fda%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Wn-xAr5UHWC5ZF_4eQ2u7N1-00gf1Xz3%22%3B%7D; _identity=6ad07e83edc53e15401ebd32b9343cdf339568a57d78b090d060400104183d91a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A13%3A%22%5B1%2C0%2C1209600%5D%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.1-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.1-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.1-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.1-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'smsclub'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/smsclub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/smsclub'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/smsclub/web/index.php'
+    'REMOTE_PORT' => '10219'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1532043723.245
+    'REQUEST_TIME' => 1532043723
+    'argv' => [
+        0 => 'r=site%2Findex'
+    ]
+    'argc' => 1
+]
+2018-07-20 02:43:09 [127.0.0.1][-][ocnpsm40fd6n3igpn4vej5oug7lauh5j][error][Error] Error: Class 'app\models\UserIdentity' not found in C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\User.php:690
+Stack trace:
+#0 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\User.php(192): yii\web\User->renewAuthStatus()
+#1 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\User.php(360): yii\web\User->getIdentity()
+#2 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Component.php(139): yii\web\User->getIsGuest()
+#3 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2-debug\panels\UserPanel.php(81): yii\base\Component->__get('isGuest')
+#4 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#5 [internal function]: yii\base\BaseObject->__construct(Array)
+#6 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#7 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#8 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#9 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2-debug\Module.php(177): yii\BaseYii::createObject(Array)
+#10 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2-debug\Module.php(149): yii\debug\Module->initPanels()
+#11 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\Module->init()
+#12 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Module.php(158): yii\base\BaseObject->__construct(Array)
+#13 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#14 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#15 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#16 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#17 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#18 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Application.php(315): yii\base\Module->getModule('debug')
+#19 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#20 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Application.php(273): yii\web\Application->bootstrap()
+#21 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#22 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Application.php(206): yii\base\BaseObject->__construct(Array)
+#23 C:\OSPanel\domains\smsclub\web\index.php(14): yii\base\Application->__construct(Array)
+#24 {main}
+2018-07-20 02:43:09 [127.0.0.1][-][ocnpsm40fd6n3igpn4vej5oug7lauh5j][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ocnpsm40fd6n3igpn4vej5oug7lauh5j'
+    '_csrf' => 'dbd752784fdd25be52a1a6d8ae767dce5f225aa62f1f42258ec753cc9094e7fda:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Wn-xAr5UHWC5ZF_4eQ2u7N1-00gf1Xz3\";}'
+    '_identity' => '6ad07e83edc53e15401ebd32b9343cdf339568a57d78b090d060400104183d91a:2:{i:0;s:9:\"_identity\";i:1;s:13:\"[1,0,1209600]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__captcha/site/captcha' => 'cekipor'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'smsclub'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smsclub/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => 'PHPSESSID=ocnpsm40fd6n3igpn4vej5oug7lauh5j; _csrf=dbd752784fdd25be52a1a6d8ae767dce5f225aa62f1f42258ec753cc9094e7fda%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Wn-xAr5UHWC5ZF_4eQ2u7N1-00gf1Xz3%22%3B%7D; _identity=6ad07e83edc53e15401ebd32b9343cdf339568a57d78b090d060400104183d91a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A13%3A%22%5B1%2C0%2C1209600%5D%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.1-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.1-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.1-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.1-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'smsclub'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/smsclub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/smsclub'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/smsclub/web/index.php'
+    'REMOTE_PORT' => '10229'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1532043789.541
+    'REQUEST_TIME' => 1532043789
+    'argv' => [
+        0 => 'r=site%2Findex'
+    ]
+    'argc' => 1
+]
+2018-07-20 02:45:01 [127.0.0.1][-][ocnpsm40fd6n3igpn4vej5oug7lauh5j][error][Error] Error: Class 'app\models\UserIdentity' not found in C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\User.php:690
+Stack trace:
+#0 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\User.php(192): yii\web\User->renewAuthStatus()
+#1 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\User.php(360): yii\web\User->getIdentity()
+#2 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Component.php(139): yii\web\User->getIsGuest()
+#3 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2-debug\panels\UserPanel.php(81): yii\base\Component->__get('isGuest')
+#4 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#5 [internal function]: yii\base\BaseObject->__construct(Array)
+#6 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#7 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#8 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#9 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2-debug\Module.php(177): yii\BaseYii::createObject(Array)
+#10 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2-debug\Module.php(149): yii\debug\Module->initPanels()
+#11 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\Module->init()
+#12 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Module.php(158): yii\base\BaseObject->__construct(Array)
+#13 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#14 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#15 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#16 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#17 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#18 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Application.php(315): yii\base\Module->getModule('debug')
+#19 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#20 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Application.php(273): yii\web\Application->bootstrap()
+#21 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#22 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Application.php(206): yii\base\BaseObject->__construct(Array)
+#23 C:\OSPanel\domains\smsclub\web\index.php(14): yii\base\Application->__construct(Array)
+#24 {main}
+2018-07-20 02:45:01 [127.0.0.1][-][ocnpsm40fd6n3igpn4vej5oug7lauh5j][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ocnpsm40fd6n3igpn4vej5oug7lauh5j'
+    '_csrf' => 'dbd752784fdd25be52a1a6d8ae767dce5f225aa62f1f42258ec753cc9094e7fda:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Wn-xAr5UHWC5ZF_4eQ2u7N1-00gf1Xz3\";}'
+    '_identity' => '6ad07e83edc53e15401ebd32b9343cdf339568a57d78b090d060400104183d91a:2:{i:0;s:9:\"_identity\";i:1;s:13:\"[1,0,1209600]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__captcha/site/captcha' => 'cekipor'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'smsclub'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smsclub/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => 'PHPSESSID=ocnpsm40fd6n3igpn4vej5oug7lauh5j; _csrf=dbd752784fdd25be52a1a6d8ae767dce5f225aa62f1f42258ec753cc9094e7fda%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Wn-xAr5UHWC5ZF_4eQ2u7N1-00gf1Xz3%22%3B%7D; _identity=6ad07e83edc53e15401ebd32b9343cdf339568a57d78b090d060400104183d91a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A13%3A%22%5B1%2C0%2C1209600%5D%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.1-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.1-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.1-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.1-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'smsclub'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/smsclub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/smsclub'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/smsclub/web/index.php'
+    'REMOTE_PORT' => '10236'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1532043901.045
+    'REQUEST_TIME' => 1532043901
+    'argv' => [
+        0 => 'r=site%2Findex'
+    ]
+    'argc' => 1
+]
+2018-07-20 02:45:12 [127.0.0.1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OSPanel\domains\smsclub\config\web.php:8) in C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\Session.php:137
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_start()...', 'C:\\OSPanel\\doma...', 137, Array)
+#1 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\Session.php(137): session_start()
+#2 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\Session.php(612): yii\web\Session->open()
+#3 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\User.php(683): yii\web\Session->get('__id')
+#4 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\User.php(192): yii\web\User->renewAuthStatus()
+#5 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\User.php(360): yii\web\User->getIdentity()
+#6 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Component.php(139): yii\web\User->getIsGuest()
+#7 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2-debug\panels\UserPanel.php(81): yii\base\Component->__get('isGuest')
+#8 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#9 [internal function]: yii\base\BaseObject->__construct(Array)
+#10 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#11 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#12 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#13 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2-debug\Module.php(177): yii\BaseYii::createObject(Array)
+#14 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2-debug\Module.php(149): yii\debug\Module->initPanels()
+#15 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\Module->init()
+#16 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Module.php(158): yii\base\BaseObject->__construct(Array)
+#17 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#18 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#19 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#20 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#21 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#22 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Application.php(315): yii\base\Module->getModule('debug')
+#23 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#24 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Application.php(273): yii\web\Application->bootstrap()
+#25 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#26 C:\OSPanel\domains\smsclub\vendor\yiisoft\yii2\base\Application.php(206): yii\base\BaseObject->__construct(Array)
+#27 C:\OSPanel\domains\smsclub\web\index.php(14): yii\base\Application->__construct(Array)
+#28 {main}
+2018-07-20 02:45:12 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ocnpsm40fd6n3igpn4vej5oug7lauh5j'
+    '_csrf' => 'dbd752784fdd25be52a1a6d8ae767dce5f225aa62f1f42258ec753cc9094e7fda:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Wn-xAr5UHWC5ZF_4eQ2u7N1-00gf1Xz3\";}'
+    '_identity' => '6ad07e83edc53e15401ebd32b9343cdf339568a57d78b090d060400104183d91a:2:{i:0;s:9:\"_identity\";i:1;s:13:\"[1,0,1209600]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__captcha/site/captcha' => 'cekipor'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'smsclub'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smsclub/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => 'PHPSESSID=ocnpsm40fd6n3igpn4vej5oug7lauh5j; _csrf=dbd752784fdd25be52a1a6d8ae767dce5f225aa62f1f42258ec753cc9094e7fda%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Wn-xAr5UHWC5ZF_4eQ2u7N1-00gf1Xz3%22%3B%7D; _identity=6ad07e83edc53e15401ebd32b9343cdf339568a57d78b090d060400104183d91a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A13%3A%22%5B1%2C0%2C1209600%5D%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.1-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.1-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.1-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.1-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'smsclub'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/smsclub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/smsclub'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/smsclub/web/index.php'
+    'REMOTE_PORT' => '10237'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1532043912.11
+    'REQUEST_TIME' => 1532043912
+    'argv' => [
+        0 => 'r=site%2Findex'
+    ]
+    'argc' => 1
+]

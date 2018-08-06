@@ -11,10 +11,16 @@ use yii\base\Model;
  * @property User|null $user This property is read-only.
  *
  */
-class LoginForm extends Model
+class LoginForm extends \yii\db\ActiveRecord
 {
-    public $username;
-    public $password;
+	const USER_LOGINED = 'user logined';
+	public static function tableName () {
+		
+		return 'user';
+	}
+	
+    public $username = 'smsclub';
+    public $password = 'smsclub';
     public $rememberMe = true;
 
     private $_user = false;
@@ -60,6 +66,7 @@ class LoginForm extends Model
     public function login()
     {
         if ($this->validate()) {
+
             return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600*24*14 : 0);
         }
         return false;

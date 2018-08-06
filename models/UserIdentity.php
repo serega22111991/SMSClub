@@ -2,15 +2,14 @@
 
 namespace app\models;
 
-class UserIdentity extends Users implements \yii\web\IdentityInterface
+class UserIdentity extends User implements \yii\web\IdentityInterface
 {
-
-
+	
     /**
      * {@inheritdoc}
      */
     public static function findIdentity($id)
-    {
+    {		
         return static::findOne($id);
     }
 
@@ -19,8 +18,7 @@ class UserIdentity extends Users implements \yii\web\IdentityInterface
      */
     public static function findIdentityByAccessToken($token, $type = null)
     {
-        
-        return static::findOne(['access_token'=>$token]);;
+ 
     }
 
     /**
@@ -47,7 +45,8 @@ class UserIdentity extends Users implements \yii\web\IdentityInterface
      */
     public function getAuthKey()
     {
-        return $this->auth_key;
+	
+        return $this->auth_key = \Yii::$app->security->generateRandomString();
     }
 
     /**
@@ -55,8 +54,9 @@ class UserIdentity extends Users implements \yii\web\IdentityInterface
      */
     public function validateAuthKey($authKey)
     {
-        return $this->auth_key === $authKey;
+		return $this->auth_key === $authKey;
     }
+
 
     /**
      * Validates password

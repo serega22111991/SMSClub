@@ -9,6 +9,10 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\user;
+use app\models\UserIdentity;
+use app\models\Test;
+use app\models\TwoFa;
 
 class SiteController extends Controller
 {
@@ -60,15 +64,28 @@ class SiteController extends Controller
      * @return string
      */
     public function actionIndex()
-    {
+    {	
+
+		$name = $_GET["name"];
+		
+		if(!$name==null){
+		$TwoFA = TwoFA::getTwoFA($name);
+		return $this->render ('test');
+		}
+	
         return $this->render('index');
     }
 
-    /**
-     * Login action.
-     *
-     * @return Response|string
-     */
+
+	  public function actionTest()
+    {
+	    //$TwoFA = TwoFA::getTwoFA();
+		
+		return $this->render ('test');
+
+	}
+
+	 
     public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
@@ -76,10 +93,28 @@ class SiteController extends Controller
         }
 
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+		
+		
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {	
+	
+			$username = $model->username;
+
+			$SESSID = session_id();
+			
+			//echo $username;
+			
+			$model = Test::findOne(['username' => $username ]); 
+			$model->auth_key  = $SESSID; 
+			$model->save();
+			
+			$cookies = Yii::$app->response->cookies;			
+			setcookie("TestCookie", $SESSID, time()+3600*24*14);
+
+            return $this->render('test');
         }
 
+		
+		
         $model->password = '';
         return $this->render('login', [
             'model' => $model,
@@ -93,7 +128,8 @@ class SiteController extends Controller
      */
     public function actionLogout()
     {
-        Yii::$app->user->logout();
+       
+		Yii::$app->user->logout();
 
         return $this->goHome();
     }

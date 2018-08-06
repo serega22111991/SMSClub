@@ -12,6 +12,14 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
+		//'turbosms' => [
+        //    'class' => 'avator\turbosms\Turbosms',
+         //   'sender' => 'VashZakaz',
+          //  'login' => '380967658654',
+          //  'password' => 'serega32147222',
+    //    ],
+	
+	
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'X0sJ3Wn4U1waVQ6tU9bCyUhHvU1VG5mU',
@@ -21,7 +29,7 @@ $config = [
         ],
         'user' => [
             'identityClass' => 'app\models\UserIdentity',
-            'enableAutoLogin' => true,
+            'enableAutoLogin' => false,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -63,6 +71,7 @@ if (YII_ENV_DEV) {
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
+	$config['modules']['debug']['allowedIPs'] = ['*'];
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
